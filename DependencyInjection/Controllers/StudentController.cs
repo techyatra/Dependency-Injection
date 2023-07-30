@@ -9,15 +9,16 @@ namespace DependencyInjection.Controllers
     public class StudentController : ControllerBase
     {
         private readonly IStudentRepo _studentRepo;
-        public StudentController(IStudentRepo studentRepo)
+        public StudentController()
         {
-            _studentRepo = studentRepo;
+           // _studentRepo = studentRepo;
         }
         // GET: api/<StudentController>
         [HttpGet]
         public string Get()
         {
-           return _studentRepo.PrintStudentName();
+            //return _studentRepo.PrintStudentName();
+            return "Nishant";
         }
 
         // GET api/<StudentController>/5
